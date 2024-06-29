@@ -31,7 +31,6 @@ uint8_t l_Lean_Expr_isRawNatLit(lean_object*);
 lean_object* l_Lean_Expr_sort___override(lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Meta_reduce_visit___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 lean_object* lean_mk_array(lean_object*, lean_object*);
-lean_object* l___private_Init_GetElem_0__outOfBounds___rarg(lean_object*);
 lean_object* l_Lean_Expr_proj___override(lean_object*, lean_object*, lean_object*);
 lean_object* lean_array_fget(lean_object*, lean_object*);
 lean_object* lean_array_fset(lean_object*, lean_object*, lean_object*);
@@ -60,6 +59,7 @@ static lean_object* l_Lean_Meta_reduce_visit___lambda__4___closed__3;
 LEAN_EXPORT lean_object* l_Lean_Meta_reduce_visit___lambda__3___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 static lean_object* l_Lean_Meta_reduce_visit___lambda__4___closed__4;
 lean_object* l_Lean_MessageData_ofFormat(lean_object*);
+lean_object* l_outOfBounds___rarg(lean_object*);
 lean_object* lean_st_ref_get(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Meta_reduceAll(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_ReaderT_bind___at_Lean_Meta_reduce_visit___spec__4(lean_object*, lean_object*);
@@ -106,7 +106,7 @@ LEAN_EXPORT lean_object* l_Lean_Meta_lambdaTelescope___at_Lean_Meta_reduce_visit
 static lean_object* l_Lean_Meta_reduce_visit___lambda__4___closed__8;
 LEAN_EXPORT lean_object* l_Lean_Meta_forallTelescope___at_Lean_Meta_reduce_visit___spec__7(lean_object*);
 uint8_t lean_nat_dec_le(lean_object*, lean_object*);
-lean_object* l_Lean_Meta_mkLambdaFVars(lean_object*, lean_object*, uint8_t, uint8_t, uint8_t, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
+lean_object* l_Lean_Meta_mkLambdaFVars(lean_object*, lean_object*, uint8_t, uint8_t, uint8_t, uint8_t, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 lean_object* lean_nat_add(lean_object*, lean_object*);
 uint8_t l_Lean_Meta_ParamInfo_isExplicit(lean_object*);
 lean_object* lean_array_uset(lean_object*, size_t, lean_object*);
@@ -1307,7 +1307,7 @@ lean_dec(x_12);
 x_15 = 0;
 x_16 = 1;
 x_17 = 1;
-x_18 = l_Lean_Meta_mkLambdaFVars(x_4, x_13, x_15, x_16, x_17, x_7, x_8, x_9, x_10, x_14);
+x_18 = l_Lean_Meta_mkLambdaFVars(x_4, x_13, x_15, x_16, x_15, x_17, x_7, x_8, x_9, x_10, x_14);
 lean_dec(x_10);
 lean_dec(x_9);
 lean_dec(x_8);
@@ -1412,7 +1412,7 @@ static lean_object* _init_l_Lean_Meta_reduce_visit___lambda__4___closed__2() {
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_from_bytes("Init.Data.Option.BasicAux", 25);
+x_1 = lean_mk_string_unchecked("Init.Data.Option.BasicAux", 25, 25);
 return x_1;
 }
 }
@@ -1420,7 +1420,7 @@ static lean_object* _init_l_Lean_Meta_reduce_visit___lambda__4___closed__3() {
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_from_bytes("Option.get!", 11);
+x_1 = lean_mk_string_unchecked("Option.get!", 11, 11);
 return x_1;
 }
 }
@@ -1428,7 +1428,7 @@ static lean_object* _init_l_Lean_Meta_reduce_visit___lambda__4___closed__4() {
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_from_bytes("value is none", 13);
+x_1 = lean_mk_string_unchecked("value is none", 13, 13);
 return x_1;
 }
 }
@@ -1449,7 +1449,7 @@ static lean_object* _init_l_Lean_Meta_reduce_visit___lambda__4___closed__6() {
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_from_bytes("Nat", 3);
+x_1 = lean_mk_string_unchecked("Nat", 3, 3);
 return x_1;
 }
 }
@@ -1457,7 +1457,7 @@ static lean_object* _init_l_Lean_Meta_reduce_visit___lambda__4___closed__7() {
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_from_bytes("succ", 4);
+x_1 = lean_mk_string_unchecked("succ", 4, 4);
 return x_1;
 }
 }
@@ -1654,7 +1654,7 @@ if (x_70 == 0)
 {
 lean_object* x_71; lean_object* x_72; uint8_t x_73; 
 x_71 = l_Lean_instInhabitedExpr;
-x_72 = l___private_Init_GetElem_0__outOfBounds___rarg(x_71);
+x_72 = l_outOfBounds___rarg(x_71);
 x_73 = l_Lean_Expr_isRawNatLit(x_72);
 lean_dec(x_72);
 if (x_73 == 0)
@@ -1717,7 +1717,7 @@ if (x_39 == 0)
 lean_object* x_40; lean_object* x_41; lean_object* x_42; 
 lean_dec(x_34);
 x_40 = l_Lean_instInhabitedExpr;
-x_41 = l___private_Init_GetElem_0__outOfBounds___rarg(x_40);
+x_41 = l_outOfBounds___rarg(x_40);
 x_42 = l_Lean_Expr_rawNatLit_x3f(x_41);
 if (lean_obj_tag(x_42) == 0)
 {
@@ -1898,7 +1898,7 @@ if (x_131 == 0)
 {
 lean_object* x_132; lean_object* x_133; uint8_t x_134; 
 x_132 = l_Lean_instInhabitedExpr;
-x_133 = l___private_Init_GetElem_0__outOfBounds___rarg(x_132);
+x_133 = l_outOfBounds___rarg(x_132);
 x_134 = l_Lean_Expr_isRawNatLit(x_133);
 lean_dec(x_133);
 if (x_134 == 0)
@@ -1961,7 +1961,7 @@ if (x_98 == 0)
 lean_object* x_99; lean_object* x_100; lean_object* x_101; 
 lean_dec(x_93);
 x_99 = l_Lean_instInhabitedExpr;
-x_100 = l___private_Init_GetElem_0__outOfBounds___rarg(x_99);
+x_100 = l_outOfBounds___rarg(x_99);
 x_101 = l_Lean_Expr_rawNatLit_x3f(x_100);
 if (lean_obj_tag(x_101) == 0)
 {

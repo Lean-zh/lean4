@@ -24,7 +24,6 @@ lean_object* l_Array_toSubarray___rarg(lean_object*, lean_object*, lean_object*)
 static lean_object* l_Std_Range_forIn_x27_loop___at_Lean_Elab_WF_checkCodomains___spec__4___closed__1;
 LEAN_EXPORT lean_object* l_Array_forInUnsafe_loop___at_Lean_Elab_WF_checkCodomains___spec__3___lambda__1___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 uint8_t l_Array_contains___at___private_Lean_Class_0__Lean_checkOutParam___spec__1(lean_object*, lean_object*);
-lean_object* l___private_Init_GetElem_0__outOfBounds___rarg(lean_object*);
 lean_object* l_Lean_instantiateMVars___at_Lean_Elab_Term_MVarErrorInfo_logError___spec__1(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 lean_object* lean_array_fget(lean_object*, lean_object*);
 lean_object* l_Lean_Expr_fvarId_x21(lean_object*);
@@ -43,6 +42,7 @@ static lean_object* l_Lean_Elab_WF_elabWFRel___rarg___lambda__1___closed__4;
 lean_object* l_Lean_MessageData_ofFormat(lean_object*);
 LEAN_EXPORT lean_object* l_Array_mapMUnsafe_map___at_Lean_Elab_WF_elabWFRel___spec__2___boxed(lean_object*, lean_object*, lean_object*, lean_object*);
 lean_object* l_Lean_Meta_getLevel(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
+lean_object* l_outOfBounds___rarg(lean_object*);
 LEAN_EXPORT lean_object* l_Array_mapMUnsafe_map___at_Lean_Elab_WF_checkCodomains___spec__1(size_t, size_t, lean_object*);
 lean_object* l_Lean_Meta_synthInstance(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 extern lean_object* l_Lean_instInhabitedExpr;
@@ -270,7 +270,7 @@ static lean_object* _init_l_Array_forInUnsafe_loop___at_Lean_Elab_WF_checkCodoma
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_from_bytes("The termination argument's type must not depend on the ", 55);
+x_1 = lean_mk_string_unchecked("The termination argument's type must not depend on the ", 55, 55);
 return x_1;
 }
 }
@@ -287,7 +287,7 @@ static lean_object* _init_l_Array_forInUnsafe_loop___at_Lean_Elab_WF_checkCodoma
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_from_bytes("function's varying parameters, but ", 35);
+x_1 = lean_mk_string_unchecked("function's varying parameters, but ", 35, 35);
 return x_1;
 }
 }
@@ -304,7 +304,7 @@ static lean_object* _init_l_Array_forInUnsafe_loop___at_Lean_Elab_WF_checkCodoma
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_from_bytes("'s termination argument does:", 29);
+x_1 = lean_mk_string_unchecked("'s termination argument does:", 29, 29);
 return x_1;
 }
 }
@@ -321,7 +321,7 @@ static lean_object* _init_l_Array_forInUnsafe_loop___at_Lean_Elab_WF_checkCodoma
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_from_bytes("\n", 1);
+x_1 = lean_mk_string_unchecked("\n", 1, 1);
 return x_1;
 }
 }
@@ -338,7 +338,7 @@ static lean_object* _init_l_Array_forInUnsafe_loop___at_Lean_Elab_WF_checkCodoma
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_from_bytes("Try using `sizeOf` explicitly", 29);
+x_1 = lean_mk_string_unchecked("Try using `sizeOf` explicitly", 29, 29);
 return x_1;
 }
 }
@@ -1541,7 +1541,7 @@ static lean_object* _init_l_Std_Range_forIn_x27_loop___at_Lean_Elab_WF_checkCodo
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_from_bytes("The termination arguments of mutually recursive functions ", 58);
+x_1 = lean_mk_string_unchecked("The termination arguments of mutually recursive functions ", 58, 58);
 return x_1;
 }
 }
@@ -1558,7 +1558,7 @@ static lean_object* _init_l_Std_Range_forIn_x27_loop___at_Lean_Elab_WF_checkCodo
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_from_bytes("must have the same return type, but the termination argument of ", 64);
+x_1 = lean_mk_string_unchecked("must have the same return type, but the termination argument of ", 64, 64);
 return x_1;
 }
 }
@@ -1575,7 +1575,7 @@ static lean_object* _init_l_Std_Range_forIn_x27_loop___at_Lean_Elab_WF_checkCodo
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_from_bytes(" has type", 9);
+x_1 = lean_mk_string_unchecked(" has type", 9, 9);
 return x_1;
 }
 }
@@ -1592,7 +1592,7 @@ static lean_object* _init_l_Std_Range_forIn_x27_loop___at_Lean_Elab_WF_checkCodo
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_from_bytes("", 0);
+x_1 = lean_mk_string_unchecked("", 0, 0);
 return x_1;
 }
 }
@@ -1609,7 +1609,7 @@ static lean_object* _init_l_Std_Range_forIn_x27_loop___at_Lean_Elab_WF_checkCodo
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_from_bytes("while the termination argument of ", 34);
+x_1 = lean_mk_string_unchecked("while the termination argument of ", 34, 34);
 return x_1;
 }
 }
@@ -1694,7 +1694,7 @@ if (x_34 == 0)
 {
 lean_object* x_90; lean_object* x_91; 
 x_90 = l_Lean_Elab_WF_instInhabitedTerminationArgument;
-x_91 = l___private_Init_GetElem_0__outOfBounds___rarg(x_90);
+x_91 = l_outOfBounds___rarg(x_90);
 x_43 = x_91;
 goto block_89;
 }
@@ -1715,7 +1715,7 @@ if (x_35 == 0)
 {
 lean_object* x_86; lean_object* x_87; 
 x_86 = l_Lean_instInhabitedName;
-x_87 = l___private_Init_GetElem_0__outOfBounds___rarg(x_86);
+x_87 = l_outOfBounds___rarg(x_86);
 x_45 = x_87;
 goto block_85;
 }
@@ -1750,7 +1750,7 @@ if (x_41 == 0)
 lean_object* x_54; lean_object* x_55; lean_object* x_56; lean_object* x_57; lean_object* x_58; lean_object* x_59; lean_object* x_60; lean_object* x_61; lean_object* x_62; lean_object* x_63; lean_object* x_64; lean_object* x_65; uint8_t x_66; 
 lean_dec(x_13);
 x_54 = l_Lean_instInhabitedName;
-x_55 = l___private_Init_GetElem_0__outOfBounds___rarg(x_54);
+x_55 = l_outOfBounds___rarg(x_54);
 x_56 = l_Lean_MessageData_ofName(x_55);
 x_57 = l_Std_Range_forIn_x27_loop___at_Lean_Elab_WF_checkCodomains___spec__4___closed__10;
 x_58 = lean_alloc_ctor(7, 2, 0);
@@ -1981,7 +1981,7 @@ if (x_29 == 0)
 {
 lean_object* x_44; lean_object* x_45; 
 x_44 = l_Lean_instInhabitedExpr;
-x_45 = l___private_Init_GetElem_0__outOfBounds___rarg(x_44);
+x_45 = l_outOfBounds___rarg(x_44);
 x_32 = x_45;
 goto block_43;
 }
@@ -2263,7 +2263,7 @@ static lean_object* _init_l_Lean_Elab_WF_elabWFRel___rarg___lambda__1___closed__
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_from_bytes("WellFoundedRelation", 19);
+x_1 = lean_mk_string_unchecked("WellFoundedRelation", 19, 19);
 return x_1;
 }
 }
@@ -2281,7 +2281,7 @@ static lean_object* _init_l_Lean_Elab_WF_elabWFRel___rarg___lambda__1___closed__
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_from_bytes("invImage", 8);
+x_1 = lean_mk_string_unchecked("invImage", 8, 8);
 return x_1;
 }
 }
